@@ -1,0 +1,24 @@
+plugins {
+  id 'java'
+  id 'com.github.ben-manes.versions' version '0.14.0'
+  id 'net.ltgt.apt' version '0.9'
+  id 'net.ltgt.errorprone' version '0.0.10'
+}
+
+group 'com.github.jbduncan'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'com.google.guava:guava:21.0'
+
+  errorprone 'com.google.errorprone:error_prone_core:2.0.19'
+
+  compileOnly 'com.google.auto.value:auto-value:1.4'
+  apt 'com.google.auto.value:auto-value:1.4'
+}
